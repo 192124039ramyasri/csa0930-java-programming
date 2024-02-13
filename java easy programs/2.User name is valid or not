@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class UserNameValidator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a username: ");
+        String username = scanner.nextLine();
+        String regex = "^[a-zA-Z0-9._-]{3,}$";
+        if (username.matches(regex)) {
+            System.out.println("Username is valid!");
+        } else {
+            System.out.println("Username is not valid!");
+        }
+    }
+}
